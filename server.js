@@ -3,6 +3,9 @@ var app = express();
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var db = mongoose.connect('mongodb://localhost/swag-shop');
+var product = require('./models/product');
+var wishlist = require('./models/wishlist');
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));

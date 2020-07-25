@@ -10,6 +10,14 @@ var wishlist = require('./models/wishlist');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
 
+
+app.post('/product', function(req, res){
+  var product = new product();
+  product.title = req.body.title;
+  product.price = req.body.price;
+
+});
+
 app.listen(3000,function(){
   console.log("Swag Shop api running at port 3000");
 })

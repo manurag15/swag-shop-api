@@ -32,7 +32,7 @@ app.post('/product', function(req, res) {
 
   product.title = req.body.title;
   product.price = req.body.price;
-
+// *********save method with error handling and returning the saved product
   // product.save(function(err, savedProduct) {
   //   if (err) {
   //     res.status(500).send({
@@ -44,6 +44,8 @@ app.post('/product', function(req, res) {
 
   // });
 
+
+// ***********save method without error handling and without returning the saved product just save it in the db
   product.save();
   res.send("Product saved");
 
